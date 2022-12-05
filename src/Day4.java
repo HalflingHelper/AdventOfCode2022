@@ -8,7 +8,7 @@ public class Day4 {
         part2();
     }
     public static void part1() throws FileNotFoundException {
-        Scanner in = new Scanner(new File("input4.txt"));
+        Scanner in = new Scanner(new File("src/inputs/input4.txt"));
 
         int count = 0;
 
@@ -34,7 +34,7 @@ public class Day4 {
     }
 
     public static void part2() throws FileNotFoundException {
-        Scanner in = new Scanner(new File("input4.txt"));
+        Scanner in = new Scanner(new File("src/inputs/input4.txt"));
 
         int count = 0;
         while (in.hasNextLine()) {
