@@ -143,7 +143,6 @@ public class Day5 {
         //Number of rows is hardcoded :(
         ArrayList<char[]> res = new ArrayList<>();
 
-
         while (s.charAt(1) != '1') {
             char[] thisRow = new char[numStacks];
 
@@ -160,10 +159,6 @@ public class Day5 {
 
             s = in.nextLine();
         }
-
-
-
         return res;
-
     }
 }
