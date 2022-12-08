@@ -23,7 +23,6 @@ public class Day6 {
             char c = dataStream.charAt(i);
             cur[i%4] = c;
 
-
             if (i >= 3) {
                 boolean dup = false;
                 for (int j = 0; j < 4; j++) {
