@@ -5,7 +5,6 @@ import java.util.Scanner;
 
 /*
  *  Day 13: Distress Signal
- *
  *    --------Part 1--------   --------Part 2--------
  *        Time   Rank  Score       Time   Rank  Score
  *    14:55:25  25548      0   15:05:46  24360      0
@@ -22,15 +21,17 @@ public class Day13 {
         Scanner in = new Scanner(new File("src/inputs/input13.txt"));
 
         int count = 0;
-        int i = 1;
+        int i = 0;
 
-        //Keeping all of the strings in a list for part 2
+        //Keeping all the strings in a list for part 2
         ArrayList<String> all = new ArrayList<>();
         //Divider packets
         all.add("[[2]]");
         all.add("[[6]]");
 
         while (in.hasNextLine()) {
+            i++;
+
             String s1 = in.nextLine();
             String s2 = in.nextLine();
 
@@ -42,24 +43,22 @@ public class Day13 {
             //Adding to the list for part 2
             all.add(s1);
             all.add(s2);
-            //Dividers in between lines
+
+            //Dividers in between lines (except for the last one).
             if (in.hasNextLine()) { in.nextLine(); }
-            i++;
         }
 
         System.out.println("Part 1 : " + count);
 
         //Have to reverse my comparator lmao
         all.sort((o1, o2) -> -1 * compare(o1, o2));
-
         int i1 = all.indexOf("[[2]]") + 1;
         int i2 = all.indexOf("[[6]]") + 1;
-        System.out.println("Part 2 : "+ (i1 * i2));
+        System.out.println("Part 2 : " + (i1 * i2));
     }
 
-    //Returns 0 if equal, 1 is s1 is less, -1 if s2 is less
+    //Returns 0 if equal, 1 is s1 is less, -1 if s2 is less (turns out this is backward)
     public static int compare(String s1, String s2) {
-        //Remove first and last list brackets, and convert to an array
         String[] a1 = toList(s1);
         String[] a2 = toList(s2);
 
@@ -67,12 +66,9 @@ public class Day13 {
             String v1 = a1[i];
             String v2 = a2[i];
 
-            if (v1.equals("")) {
-                if (v2.equals("")) continue;
-                return 1;
-            }
-
-            if (v2.equals("")) { return -1; }
+            //Handling empty lists: we can cheat and use the same comparison by making them less than any possible value
+            if (v1.equals("")) { v1 = "-1"; }
+            if (v2.equals("")) { v2 = "-1"; }
 
             if (v1.charAt(0) == '[' && v2.charAt(0) == '[') {
                 int c = compare(v1, v2);
@@ -96,6 +92,7 @@ public class Day13 {
         return a1.length < a2.length ? 1 : -1;
     }
 
+    //Remove first and last list brackets, and convert to an array
     public static String[] toList(String s) {
         ArrayList<String> l = new ArrayList<>();
         int depth = 0;
@@ -109,6 +106,7 @@ public class Day13 {
                 start = i+1;
             }
         }
+
         //Add the last element (avoiding last brace)
         l.add(s.substring(start, s.length()-1));
         return l.toArray(new String[0]);
