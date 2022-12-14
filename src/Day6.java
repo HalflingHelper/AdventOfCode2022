@@ -13,7 +13,7 @@ public class Day6 {
         part2();
     }
     public static void part1() throws FileNotFoundException {
-        Scanner in = new Scanner(new File("src/inputs/input6.txt"));
+        Scanner in = new Scanner(new File("src/inputs/input06.txt"));
         String dataStream = in.nextLine();
 
         char[] cur = new char[4];
@@ -44,7 +44,7 @@ public class Day6 {
     }
 
     public static void part2() throws FileNotFoundException {
-        Scanner in = new Scanner(new File("src/inputs/input6.txt"));
+        Scanner in = new Scanner(new File("src/inputs/input06.txt"));
         String dataStream = in.nextLine();
 
         char[] cur = new char[14];

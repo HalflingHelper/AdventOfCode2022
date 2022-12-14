@@ -38,7 +38,7 @@ public class Day9 {
     }
 
     public static void part1() throws FileNotFoundException {
-        Scanner in = new Scanner(new File("src/inputs/input9.txt"));
+        Scanner in = new Scanner(new File("src/inputs/input09.txt"));
 
         //Coordinates of the list's head and tail
         int headx = 0;
@@ -108,7 +108,7 @@ public class Day9 {
     }
 
     public static void part2() throws FileNotFoundException {
-        Scanner in = new Scanner(new File("src/inputs/input9.txt"));
+        Scanner in = new Scanner(new File("src/inputs/input09.txt"));
         HashSet<Integer> visited = new HashSet<>();
         int count = 0;
 

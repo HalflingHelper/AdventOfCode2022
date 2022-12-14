@@ -9,7 +9,7 @@ public class Day3 {
     }
 
     public static void part1() throws FileNotFoundException {
-        Scanner in = new Scanner(new File("src/inputs/input3.txt"));
+        Scanner in = new Scanner(new File("src/inputs/input03.txt"));
 
         int count = 0;
 
@@ -36,7 +36,7 @@ public class Day3 {
     }
 
     public static void part2() throws FileNotFoundException {
-        Scanner in = new Scanner(new File("src/inputs/input3.txt"));
+        Scanner in = new Scanner(new File("src/inputs/input03.txt"));
 
         int j = 2;
         int count = 0;

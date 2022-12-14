@@ -14,7 +14,7 @@ public class Day5 {
     }
 
     public static  void part1() throws FileNotFoundException {
-        Scanner in = new Scanner(new File("src/inputs/input5.txt"));
+        Scanner in = new Scanner(new File("src/inputs/input05.txt"));
 
         ArrayList<char[]> stacks = loadStacks(in);
 
@@ -76,7 +76,7 @@ public class Day5 {
     }
 
     public static  void part2() throws FileNotFoundException {
-        Scanner in = new Scanner(new File("src/inputs/input5.txt"));
+        Scanner in = new Scanner(new File("src/inputs/input05.txt"));
 
         ArrayList<char[]> stacks = loadStacks(in);
 

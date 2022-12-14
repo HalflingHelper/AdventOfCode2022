@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class Day8 {
     public static void main(String[] args) throws FileNotFoundException {
-        Scanner in = new Scanner(new File("src/inputs/input8.txt"));
+        Scanner in = new Scanner(new File("src/inputs/input08.txt"));
         int[][] trees = new int[99][99];
 
         //Load the trees into an array for use by both parts

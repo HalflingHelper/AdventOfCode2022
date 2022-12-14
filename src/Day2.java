@@ -9,7 +9,7 @@ public class Day2 {
     }
 
     public static void part1() throws FileNotFoundException {
-        File input = new File("src/inputs/input2.txt");
+        File input = new File("src/inputs/input02.txt");
         Scanner in = new Scanner(input);
 
         int score = 0;
@@ -47,7 +47,7 @@ public class Day2 {
         System.out.println(score);
     }
     public static void part2() throws FileNotFoundException {
-        File input = new File("src/inputs/input2.txt");
+        File input = new File("src/inputs/input02.txt");
         Scanner in = new Scanner(input);
 
         int score = 0;

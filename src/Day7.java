@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class Day7 {
     public static void main(String[] args) throws FileNotFoundException {
-        Directory parent = loadDirectory("src/inputs/input7.txt");
+        Directory parent = loadDirectory("src/inputs/input07.txt");
 
         //Part one
         System.out.println("Part 1: " + parent.sumSizes(100000));

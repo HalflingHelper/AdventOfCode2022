@@ -11,7 +11,7 @@ public class Day1 {
     }
 
     public static void part1() throws FileNotFoundException {
-        File input = new File("src/inputs/input.txt");
+        File input = new File("src/inputs/input01.txt");
         Scanner in = new Scanner(input);
 
         int cur = 0;
@@ -33,7 +33,7 @@ public class Day1 {
     }
 
     public static void part2() throws FileNotFoundException {
-        File input = new File("src/inputs/input.txt");
+        File input = new File("src/inputs/input01.txt");
         Scanner in = new Scanner(input);
 
         int cur = 0;
